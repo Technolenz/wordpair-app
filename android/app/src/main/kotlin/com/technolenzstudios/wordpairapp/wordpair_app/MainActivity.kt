@@ -1,4 +1,4 @@
-package com.technolenzstudios.wordpairapp.wordpair_app
+package com.flutterlenz.wordpairapp.wordpair_app
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Pair App - Technolenz Studio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-pink: #FF79B0;
+            --accent-purple: #A683E9;
+            --soft-bg: #fff5f9;
+            --text-dark: #3A3042;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        body {
+            background: var(--soft-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            padding: 5rem 0;
+            background: linear-gradient(135deg, var(--primary-pink), var(--accent-purple));
+            color: white;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 100px;
+            background: url('data:image/svg+xml,<svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21L12 17.77L5.82 21L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>');
+            opacity: 0.1;
+        }
+
+        .studio-name {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #fff, #FFB3F5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .app-title {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 25px rgba(166, 131, 233, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-pink);
+            box-shadow: 0 10px 30px rgba(255, 121, 176, 0.2);
+        }
+
+        .tech-stack {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 4rem 0;
+            flex-wrap: wrap;
+        }
+
+        .tech-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 15px;
+            width: 150px;
+        }
+
+        .links {
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1.2rem 2.5rem;
+            margin: 0 1rem;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .github-btn {
+            background: var(--text-dark);
+            color: white;
+        }
+
+        .demo-btn {
+            background: linear-gradient(45deg, var(--primary-pink), var(--accent-purple));
+            color: white;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(166, 131, 233, 0.3);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+            }
+            
+            .app-title {
+                font-size: 2.2rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="studio-name">Technolenz Studio</h1>
+            <h2 class="app-title">Word Pair Explorer</h2>
+            <p style="font-size: 1.2rem; opacity: 0.9;">Discover & Collect Beautiful Word Combinations</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="features">
+            <div class="feature-card">
+                <h3 style="color: var(--accent-purple); margin-bottom: 1rem;">
+                    <i class="fas fa-magic"></i> Smart Generator
+                </h3>
+                <p>Generate creative word pairs with our suggestion engine</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3 style="color: var(--accent-purple); margin-bottom: 1rem;">
+                    <i class="fas fa-heart"></i> Favorites Collection
+                </h3>
+                <p>Save your favorite combinations with one click and access them anytime</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3 style="color: var(--accent-purple); margin-bottom: 1rem;">
+                    <i class="fas fa-share-alt"></i> Easy Sharing
+                </h3>
+                <p>Share beautiful word pairs directly to social media or use in day to day conversation</p>
+            </div>
+        </section>
+
+        <div class="tech-stack">
+            <div class="tech-item">
+                <i class="fas fa-code fa-3x" style="color: var(--primary-pink);"></i>
+                <p style="margin-top: 1rem;">Flutter Powered</p>
+            </div>
+            <div class="tech-item">
+                <i class="fas fa-cloud fa-3x" style="color: var(--accent-purple);"></i>
+                <p style="margin-top: 1rem;">Local Sync</p>
+            </div>
+            <div class="tech-item">
+                <i class="fas fa-paint-brush fa-3x" style="color: var(--primary-pink);"></i>
+                <p style="margin-top: 1rem;">Beautiful Themes</p>
+            </div>
+        </div>
+
+        <section class="links">
+            <a href="https://github.com/Technolenz/wordpair-app/" class="btn github-btn" target="_blank">
+                <i class="fab fa-github"></i> Source Code
+            </a>
+            <a href="https://wordpair-app.web.app/" class="btn demo-btn" target="_blank">
+                <i class="fas fa-play-circle"></i> Live Demo
+            </a>
+        </section>
+    </main>
+
+    <script>
+        // Add animation to feature cards on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('.feature-card').forEach((card) => {
+            card.style.opacity = 0;
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+            observer.observe(card);
+        });
+
+        // Add hover effect to tech items
+        document.querySelectorAll('.tech-item').forEach(item => {
+            item.addEventListener('mouseover', () => {
+                item.style.transform = 'scale(1.05)';
+            });
+            item.addEventListener('mouseout', () => {
+                item.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
