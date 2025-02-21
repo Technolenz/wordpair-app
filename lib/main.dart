@@ -46,7 +46,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text("Wordpair App", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-              Text("Technolenz Studios", style: TextStyle(fontSize: 12, fontStyle: FontStyle.italic)),
+              Text("Flutterlenz", style: TextStyle(fontSize: 12, fontStyle: FontStyle.italic)),
               SizedBox(height: 20),
               CircularProgressIndicator(),
             ],
