@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Word Pair App - Technolenz Studio</title>
+    <link rel="icon" href="favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -68,7 +70,7 @@
             font-size: 3rem;
             margin-bottom: 1.5rem;
             color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .features {
@@ -143,29 +145,38 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         @media (max-width: 768px) {
             .container {
                 padding: 1.5rem;
             }
-            
+
             .app-title {
                 font-size: 2.2rem;
             }
-            
+
             .features {
                 grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
+
 <body>
     <header class="header">
         <div class="container">
-            <h1 class="studio-name">Technolenz Studio</h1>
+            <h1 class="studio-name">Flutterlenz IO</h1>
+            h6 style="font-size: 0.5rem; margin-top: 1rem; color: white;">Powered by Technolenz</h6>
             <h2 class="app-title">Word Pair Explorer</h2>
             <p style="font-size: 1.2rem; opacity: 0.9;">Discover & Collect Beautiful Word Combinations</p>
         </div>
@@ -179,14 +190,14 @@
                 </h3>
                 <p>Generate creative word pairs with our suggestion engine</p>
             </div>
-            
+
             <div class="feature-card">
                 <h3 style="color: var(--accent-purple); margin-bottom: 1rem;">
                     <i class="fas fa-heart"></i> Favorites Collection
                 </h3>
                 <p>Save your favorite combinations with one click and access them anytime</p>
             </div>
-            
+
             <div class="feature-card">
                 <h3 style="color: var(--accent-purple); margin-bottom: 1rem;">
                     <i class="fas fa-share-alt"></i> Easy Sharing
@@ -224,7 +235,7 @@
         // Add animation to feature cards on scroll
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if(entry.isIntersecting) {
+                if (entry.isIntersecting) {
                     entry.target.style.opacity = 1;
                     entry.target.style.transform = 'translateY(0)';
                 }
@@ -249,4 +260,5 @@
         });
     </script>
 </body>
+
 </html>
