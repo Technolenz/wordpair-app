@@ -1,21 +1,6 @@
 {
   "hosting": [
     {
-      "site": "flutterlenz",
-      "public": "build/web",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ],
-      "rewrites": [
-        {
-          "source": "**",
-          "destination": "/index.html"
-        }
-      ]
-    },
-    {
       "site": "word-pair-app",
       "public": "build/web",
       "ignore": [
